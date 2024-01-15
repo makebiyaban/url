@@ -1,7 +1,7 @@
 from flask import Flask
+from config import Config
 
-myapp=Flask(__name__)
+myapp = Flask(__name__)
+myapp.config.from_object(Config)
 
-@myapp.route("/")
-def  index():
-	return "helllo"
+from app import routes
