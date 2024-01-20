@@ -2,6 +2,18 @@
 
 {% block content %}
 <p>helllooooo {{user.name}}</p>
-    this is my first page
+<p>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.link.label }}
+            {{ form.link(size=256) }}
+        </p>
+        <p>
+            {{form.submit }}
+        </p>
+    </form>
+
+</p>
 
 {% endblock %}
